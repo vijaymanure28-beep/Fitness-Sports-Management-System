@@ -1,0 +1,629 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #141e46, #3657a5);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 15, 40, 0.65);
+}
+
+.navbar h2 {
+  color: #35c6ff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Main section */
+.hero {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 20px;
+  gap: 28px;
+}
+
+/* Main title */
+.hero-content {
+  text-align: center;
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero-content p {
+  font-size: 17px;
+  color: #d5e4ff;
+  font-weight: 400;
+}
+
+/* Login and registration card */
+.card {
+  width: 100%;
+  max-width: 480px;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.card h2 {
+  color: #35d5ff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.card input,
+.card select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #8baaff;
+  outline: none;
+  background: rgba(10, 20, 60, 0.55);
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.card input::placeholder {
+  color: #d2dcf5;
+}
+
+.card select option {
+  background: #24366f;
+  color: white;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #64e6df;
+  color: #18345e;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background: #42d1c9;
+}
+
+.card p {
+  margin-top: 20px;
+  color: white;
+}
+
+.form-link {
+  color: #64e6ff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Dashboard */
+.dashboard-grid {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dashboard-card {
+  max-width: none;
+  text-align: left;
+}
+
+.dashboard-card h2 {
+  font-size: 22px;
+}
+
+.dashboard-card span {
+  display: inline-block;
+  margin-top: 15px;
+  color: #64e6df;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 25px 18px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 15px 4%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .navbar h2 {
+    font-size: 18px;
+  }
+}
+
+/* Dashboard layout */
+.dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141e46, #3657a5);
+}
+
+.dashboard-container {
+  width: min(1100px, 94%);
+  margin: auto;
+  padding: 40px 0;
+}
+
+.dashboard-heading {
+  margin-bottom: 30px;
+}
+
+.dashboard-heading h1 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.dashboard-heading p {
+  color: #d5e4ff;
+}
+
+/* Overview cards */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.dashboard-card {
+  padding: 22px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-icon {
+  font-size: 28px;
+}
+
+.dashboard-card h3 {
+  font-size: 15px;
+  margin: 12px 0;
+  color: #d5e4ff;
+}
+
+.dashboard-card h2 {
+  color: #64e6df;
+  font-size: 27px;
+}
+
+.dashboard-card p {
+  font-size: 12px;
+  color: #d5e4ff;
+  margin-top: 8px;
+}
+
+/* Dashboard sections */
+.dashboard-section {
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-section h2 {
+  color: #64e6df;
+  margin-bottom: 12px;
+}
+
+.dashboard-section p {
+  color: #d5e4ff;
+  margin-bottom: 15px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  background: rgba(10, 20, 60, 0.45);
+  border-radius: 10px;
+}
+
+.profile-item span {
+  color: #b8c9ee;
+  font-size: 13px;
+}
+
+.profile-item strong {
+  color: white;
+}
+
+/* Tracking forms */
+.tracking-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tracking-form input {
+  flex: 1 1 180px;
+  min-width: 0;
+  padding: 13px;
+  border-radius: 9px;
+  border: 1px solid #8baaff;
+  background: rgba(10, 20, 60, 0.55);
+  color: white;
+  font-size: 14px;
+}
+
+.tracking-form input::placeholder {
+  color: #d2dcf5;
+}
+
+.tracking-form .main-btn {
+  width: auto;
+  padding: 12px 22px;
+  margin: 0;
+}
+
+/* Activity list */
+.activity-list {
+  margin-top: 20px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  margin-top: 10px;
+  background: rgba(10, 20, 60, 0.4);
+  border-radius: 9px;
+  color: white;
+}
+
+.activity-item span {
+  color: #64e6df;
+  font-size: 14px;
+}
+
+/* Sports */
+.dashboard-select {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  padding: 13px;
+  margin: 15px 0;
+  border-radius: 9px;
+  border: 1px solid #8baaff;
+  background: #202d65;
+  color: white;
+  font-size: 15px;
+}
+
+.sports-result {
+  margin-top: 18px;
+  line-height: 1.8;
+}
+
+/* AI section */
+.ai-section {
+  background: rgba(45, 180, 180, 0.12);
+}
+
+.coming-soon {
+  display: inline-block;
+  padding: 9px 14px;
+  border-radius: 20px;
+  background: rgba(100, 230, 223, 0.15);
+  color: #64e6df;
+  font-size: 13px;
+}
+
+.dashboard-footer {
+  text-align: center;
+  padding: 25px;
+  color: #c5d5f4;
+}
+
+/* Navbar user greeting */
+.user-welcome {
+  color: white;
+  margin-right: 15px;
+}
+
+/* Responsive dashboard */
+@media (max-width: 850px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .dashboard-grid,
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-heading h1 {
+    font-size: 28px;
+  }
+
+  .dashboard-section {
+    padding: 18px;
+  }
+
+  .activity-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .user-welcome {
+    display: none;
+  }
+}
+/* Login and Registration Layout Fix */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 35px;
+  margin: 0 auto;
+  background: rgba(15, 25, 65, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: white;
+}
+
+.form-container h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  color: #dce7ff;
+  margin: 15px 0;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border-radius: 9px;
+  border: 1px solid #9bb5ff;
+  background: rgba(255, 255, 255, 0.95);
+  color: #172044;
+  font-size: 15px;
+}
+
+.form-container input::placeholder {
+  color: #626b80;
+}
+
+.form-container .main-btn {
+  width: 100%;
+  padding: 14px;
+  margin: 0;
+  border: none;
+  border-radius: 9px;
+  background: #28e0dc;
+  color: #10234b;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: #64e6df;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .form-container {
+    padding: 25px 18px;
+  }
+}
+/* Workout History Heading Visibility Fix */
+.dashboard-section h2 {
+  color: #ffffff !important;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Make workout history items clear */
+.activity-item {
+  color: #ffffff !important;
+  background: rgba(15, 25, 75, 0.85);
+}
+
+.activity-item strong {
+  color: #ffffff;
+}
+
+.activity-item span {
+  color: #64e6df;
+  font-weight: 600;
+}
+/* Fix only Workout History heading */
+.dashboard-section h2 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Ensure the heading's parent does not fade it */
+.dashboard-section {
+  opacity: 1 !important;
+}
+/* Make Workout History and Diet History visible */
+h3 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Ensure history headings are not faded */
+.activity-list h3,
+.history-heading {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.ai-message {
+  color: #ffffff;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.ai-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ai-result-item {
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(10, 20, 60, 0.45);
+  border: 1px solid rgba(100, 230, 223, 0.35);
+}
+
+.ai-result-item h3 {
+  color: #64e6df;
+  margin-bottom: 10px;
+}
+
+.ai-result-item p {
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.ai-results .profile-item {
+  min-width: 0;
+}
+
+@media (max-width: 550px) {
+  .ai-results {
+    grid-template-columns: 1fr;
+  }
+}
